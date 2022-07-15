@@ -8,4 +8,4 @@ for m in range (t):
         tot_coast += 990
 if t >= 3:
     tot_coast = tot_coast * 0.9
-print("Сумма к оплате: ", tot_coast, "руб.")
+print(f"Сумма к оплате: {tot_coast} руб.")
