@@ -1,15 +1,15 @@
 def vvod_chisel():
     global string1
-    string1 = input("Введите последовательность целых чисел через пробел:")
+    string1 = input("Введите последовательность чисел через пробел:")
     proverka()
 
 def proverka():
     global L
     try:
-        L = list(map(int, string1.split()))
+        L = list(map(float, string1.split()))
         qsort(L, 0, len(L)-1)
     except ValueError:
-        print("Вводятся только целые числа через пробел, без использования разделяющих знаков")
+        print("Вводятся только числа через пробел, без использования разделяющих знаков")
         vvod_chisel()
 
 def qsort(array, left, right):
@@ -61,10 +61,10 @@ def vvod_chisla():
 
 def proverka_chisla():
     try:
-        any_numb = int(input("Введите любое целое число:"))
+        any_numb = float(input("Введите любое число:"))
         search(L, any_numb, 0, len(L) -1)
     except ValueError:
-        print("Вводится только целое число")
+        print("Вводится только число")
         vvod_chisla()
 
 vvod_chisel()
